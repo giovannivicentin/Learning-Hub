@@ -1,0 +1,159 @@
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   CSS: Cascading Style Sheets   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+    1 - Color:
+
+    We have several ways to define a color in CSS. 
+
+    Color Keywords:
+
+    The first and easiest way to specify a color is using one of the 140 predefined color keywords specified in CSS.
+    tag: " color: Name of color; " 
+*/
+
+p {
+     color: red;
+}
+
+/*  RGB Color Values: 
+
+    Most of you have probably heard about CMYK values for print design. RGB, which stands for red, green, and blue is the color model that monitors use.
+    Since in web design we're primarily concerned with what web pages look like on screens, RGB is the color model we use.
+
+    RGB colors have three values that represent: red, green, and blue
+    Each value can be a number between 0 and 255 or a percentage from 0 to 100%
+*/
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+p { 
+    color: rgb(100%, 100%, 100%); 
+}
+
+/*  Hexadecimal Color Values:
+
+    Probably the most common (yet least intuitive) way to specify colors in CSS is to use their hexadecimal (or hex) values. 
+    Hex values are actually just a different way to represent RGB values. Instead of using three numbers between 0 and 255, 
+    you use six hexadecimal numbers. Hex numbers can be 0-9 and A-F. Hex values are always prefixed with a # symbol.
+    Demonstrated here are some basic CSS rules rules using hex values.
+*/
+
+p { 
+    color: #000000; 
+} 
+
+p { 
+    color: #000; 
+}
+/* have one more, "HLS" but isn't usually. */
+
+/*  2 - font-family:
+
+    The name says, is the family/type of your font. 
+*/
+
+p {
+    font-family: Arial
+}
+
+/*  3 - font-size:
+
+    The name says again, is the size of your font.
+    And you need to put "px" after the number to show the size for machines.
+*/
+
+p {
+    font-size: 50px
+}
+
+/*  4 - text-align:
+
+    The name says again, is the align of your text.
+*/
+
+p {
+    text-align: right;
+}
+
+/*  5 - border:
+
+    first parametrer is border width: This parameter specifies the width of the border. It can be a value in pixels, ems, rems, or other units.
+
+    second parametrer is border style: This parameter specifies the style of the border. It can be solid, dotted, dashed, double, groove, ridge, inset, outset, or none.
+
+    third parametrer is border color: This parameter specifies the color of the border. It can be a color name, a hexadecimal value, an RGB value, or an HSL value. 
+    If multiple borders are specified (using the shorthand border property with four values), you can set the color for each border using the following order: top, right, bottom, left.
+*/
+
+p {
+    border: 9px dotted gray;
+}
+
+/*  6 - border-radius:
+    
+    The border-radius CSS property allows you to round the corners of an element's border. 
+    It can take one, two, three, or four values to specify the amount of rounding for each corner.
+*/
+
+p {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+/* You can also specify different values for each corner by using the border-top-left-radius, border-top-right-radius, border-bottom-right-radius, and border-bottom-left-radius properties. */
+
+p {
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 15px;
+}
+
+/*  7 - background-color:
+
+    The background-color CSS property sets the background color of an element. It accepts a variety of color values, including named colors, hexadecimal values, RGB values, and HSL values. */
+
+p {
+  background-color: red;
+}
+
+/*  8 - text-decoration:
+
+    The text-decoration CSS property is used to add visual effects to text. It can be used to underline, overline, strike through, or add a color to text. */
+
+p {
+    text-decoration: underline red;
+}
+      
+p {
+    text-decoration: underline dashed black;
+}
+
+/*  9 - font-style:
+
+    The font-style CSS property is used to specify the style of the font. It can be used to set the font to italic or oblique, or to revert back to the default style.
+*/
+
+p {
+    font-style: italic;
+}
+
+p {
+    font-style: oblique;
+}
+
+/*  10 - list-style:
+
+    The list-style CSS property is used to set the style, image, and position of the markers or bullets of an HTML list. 
+    It is a shorthand property that can be used to set the list-style-type, list-style-image, and list-style-position properties in a single declaration.
+    In this example, the list-style property is set to "circle inside", which will display a filled circle as the marker for each list item, and position the marker inside the list item.
+*/
+
+ul {
+    list-style: circle inside;
+}
