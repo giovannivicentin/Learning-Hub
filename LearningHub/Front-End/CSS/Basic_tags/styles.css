@@ -1,0 +1,145 @@
+/*  all tags in css, I will not show all tags because have too much tags
+    https://meiert.com/en/indices/css-properties/ 
+    https://www.w3schools.com/cssref/index.php
+*/
+
+h1 {
+    font-family: Helvetica;
+    color: red;
+    font-size: 50px;
+    text-align: right;
+}
+  
+h2 {
+    font-family: Monaco;
+    color: seagreen;
+    font-size: 40px;
+    border: 9px dotted gray;
+    border-radius: 10px;
+    text-align: center;
+}
+  
+p {
+    font-family: Comic Sans MS;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+}
+  
+div {
+    color: blue;
+}
+  
+span {
+    color: yellow;
+    text-decoration: underline;
+    font-style: italic;
+}
+  
+ol {
+    list-style: upper-roman;
+}
+  
+ul {
+    list-style: square;
+}
+  
+li {
+    color: brown;
+}
+
+/*  
+    In the CSS, notice the . (period) before the class name. This is how you differentiate between a tag name (like h1) and a class name 
+    (like "branding".)
+    So what should you use, generally speaking. Classes. Almost always classes. This is the consensus in the front end development community. 
+    Classes are the best way to style web pages. There are rare occasions that it may be useful style on tags (like if you literally want to 
+    style every a tag on the page) but those cases are rare. Use classes. Err on the side of using classes too much.
+*/
+
+.branding {
+    color: red;
+}
+
+.blog-post-title {
+    color: limegreen;
+}
+
+/*  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Cascade %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Avoid using this ability of CSS where-ever possible.
+    So, the cascade. What if you have two CSS classes that have conflicting properties?
+    Which one "wins" and is applied? Let's see an example.
+
+    In this one, we have two rules with the same class (which is "legal" CSS.) So which one gets applied? Since they're equal, 
+    the one that comes LAST wins. So in this case, the h1 would be green. So remember that rule (we'll recap at the end): 
+    when everything is equal, the last one gets applied. It'd work the same if we had two h1 selectors as well.
+*/
+
+.title {
+    color: red;
+}
+
+.title {
+    color: green;
+}
+
+/*
+    First of all, yes, one tag can have multiple classes, and that can be useful. Okay, so what is this going to look like? 
+    In the eyes of CSS, those two selectors are equal since they both have the same specificity (key word, you'll see it used 
+    a lot when talking about CSS.) They both specific one class which makes them equal. So in this case, since comes last in the CSS, 
+    it wins. The color will be green. What about the border? Since doesn't conflict, it'll have a black border too. So keep in mind that 
+    each of these "conflicts" is resolved on a property-by-property basis. So the end result in an that has a black border 
+    and green font..title.titleh1
+
+    This how you add two classes to one selector. Notice there's no space between the two class names (that means something else.) 
+    The selector will only match a tag that has both classes. If has only one of the two, it will not match. As you may imagine, 
+    since it has two classes, it's more specific, and therefore it wins..main-brand.title
+*/
+
+.main-brand-3.title-3 {
+    color: red;
+}
+
+.title-3 {
+    color: green;
+}
+
+/*
+    This one is less obvious. Now we have to understand specificity even more. A class is considered more specific than a tag. 
+    So a class selector "overpowers" a tag selector. It's more specific. Therefore, even though the selector comes last, 
+    the wins because it's more specific. This is why it's useful to do everything using classes; you don't need to worry about these 
+    specificity wars if everything is equal and try to have it some you don't have conflicting rules (which is not always possible.)h1.title
+
+    A useful but imperfect way to think about this is to think of specificity like a number. The class is like the tens digit, and the 
+    tag is like the ones digit. So something with one class selector would have a number specificity and something with one tag selector 
+    would a specificity of . The bigger number wins. This is imperfect because one class selector is still bigger than 10 tag selectors, 
+    but it's a useful mental device to quickly evaluate mentally which tag is more specific.101
+*/
+
+.title-4 {
+    color: orange;
+}
+
+h1 {
+    color: green;
+}
+
+/*
+    The first selector, is how you select both a tag and a class at the same time. As you may imagine, this is more specific than 
+    the third selector, . If you remember our shortcut trick, the first selector would be 11, the second would be 20, and the last 
+    would be 10, making the second selector the most specific, and indeed it is. The first selector isn't a good idea to do; using 
+    a tag and a class is usually a bad idea and means you're likely doing something weird in your code. I'm just showing you because 
+    it does happen in a lot in existing code.h1.main-brand.main-brand
+*/
+
+h1.main-brand-5 {
+    color: red;
+}
+
+.main-brand-5.title-5 {
+    color: orange;
+}
+
+.main-brand-5 {
+    color: green;
+}
