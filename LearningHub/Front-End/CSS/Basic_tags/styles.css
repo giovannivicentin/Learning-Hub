@@ -129,7 +129,7 @@ h1 {
     the third selector, . If you remember our shortcut trick, the first selector would be 11, the second would be 20, and the last 
     would be 10, making the second selector the most specific, and indeed it is. The first selector isn't a good idea to do; using 
     a tag and a class is usually a bad idea and means you're likely doing something weird in your code. I'm just showing you because 
-    it does happen in a lot in existing code.h1.main-brand.main-brand
+    it does happen in a lot in existing code. h1.main-brand.main-brand
 */
 
 h1.main-brand-5 {
