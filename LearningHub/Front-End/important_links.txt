@@ -18,3 +18,6 @@ https://www.w3schools.com/cssref/index.php
 
 Pseudo-classes in css:
 https://css-tricks.com/pseudo-class-selectors/
+
+Animations in css:
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation
