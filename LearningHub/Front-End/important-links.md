@@ -21,3 +21,7 @@ _https://css-tricks.com/pseudo-class-selectors/_
 
 ### Animations in css:
 _https://developer.mozilla.org/en-US/docs/Web/CSS/animation_
+
+### Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.
+
+_https://developer.mozilla.org/index.html_
